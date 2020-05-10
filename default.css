@@ -83,23 +83,23 @@ body {
 
 /* .markdown */
 .markdown {
-	--paragraph-spacing: 0.5rem;
+	--paragraph-spacing: 0.5em;
 	--paragraph-indent: 0ch;
 
-	margin: 1rem 2rem;
+	margin: 1em 2em;
 }
 
 @media print {
 	.markdown {
 		margin: 0;
 
-		font-size: 1.2rem;
+		font-size: 1.2em;
 	}
 }
 
 .markdown p {
 	padding-bottom: 0;
-	margin-bottom: calc(var(--paragraph-spacing) - 1rem);
+	margin-bottom: calc(var(--paragraph-spacing) - 1em);
 
 	text-indent: var(--paragraph-indent);
 	word-wrap: break-word;
@@ -133,10 +133,10 @@ body {
 }
 
 .markdown h1 {
-	margin: 2rem 0 0.1rem;
-	padding-bottom: 0.1rem;
+	margin: 2em 0 0.4em;
+	padding-bottom: 0.1em;
 
-	border-bottom: 0.1rem solid var(--border-color);
+	border-bottom: 0.05em solid var(--border-color);
 }
 
 .markdown h1:first-of-type {
@@ -144,36 +144,36 @@ body {
 }
 
 .markdown h2 {
-	margin: 2rem 0 0;
+	margin: 2em 0 0;
 	padding-top: 0;
 	padding-bottom: 0;
 	width: 80%;
 
-	border-bottom: 0.1rem solid var(--border-color);
+	border-bottom: 0.05em solid var(--border-color);
 }
 
 .markdown p+h2 {
-	margin-top: 2.5rem;
+	margin-top: 1.5em;
 }
 
 .markdown h3 {
-	margin: 1.5rem auto -0.4rem;
+	margin: 1.5em auto -0.4em;
 	padding-bottom: 0;
 
 	font-weight: bolder;
 }
 
 .markdown h4 {
-	margin: 1.5rem auto -0.4rem;
+	margin: 1.5em auto -0.4em;
 	padding-bottom: 0;
 }
 
 .markdown hr {
 	width: 75%;
 	height: 0;
-	margin: 1.8rem auto 1rem;
+	margin: 1.8em auto 1em;
 
-	border-top: 0.1rem solid;
+	border-top: 0.1em solid;
 	border-bottom: 0;
 	border-left: none;
 	border-right: none;
@@ -182,7 +182,7 @@ body {
 
 .markdown table {
 	width: 100%;
-	margin: 1rem auto;
+	margin: 1em auto;
 
 	font-size: 100%;
 	border-collapse: collapse;
@@ -195,19 +195,19 @@ body {
 }
 
 .markdown table td {
-	padding: 1rem;
+	padding: 1em;
 }
 
 .markdown table th {
-	padding: 0.8rem;
+	padding: 0.8em;
 
-	border: 0.1rem solid;
+	border: 0.1em solid;
 	border-left: none;
 	border-right: none;
 }
 
 .markdown table tr td {
-	padding: 0.4rem;
+	padding: 0.4em;
 }
 
 .markdown table tr:nth-child(odd) td {
@@ -219,18 +219,18 @@ body {
 }
 
 .markdown blockquote {
-	padding-left: 1.5rem;
-	margin: 2rem 0;
+	padding-left: 1.5em;
+	margin: 2em 0;
 
 	font-style: italic;
-	border-left: 0.25rem solid;
+	border-left: 0.25em solid;
 }
 
 .markdown img {
 	display: block;
 	max-width: 100%;
 	max-height: 480px;
-	margin: 1.5rem auto;
+	margin: 1.5eem auto;
 }
 
 .markdown img+br {
@@ -240,7 +240,7 @@ body {
 .markdown img+br+rem,
 .markdown img+rem {
 	display: block;
-	margin: 0.5rem auto 1.5rem;
+	margin: 0.5em auto 1.5em;
 
 	text-align: center;
 }
@@ -248,19 +248,19 @@ body {
 /* .subtitled-h1 */
 .markdown.subtitled-h1 h1,
 .markdown .subtitled-h1 h1 {
-	margin-bottom: -2rem;
+	margin-bottom: -1em;
 
 	border: none;
 }
 
 .markdown.subtitled-h1 h1+p,
 .markdown .subtitled-h1 h1+p {
-	margin: 2rem 0 0;
+	margin: 2em 0 0;
 	padding-top: 0;
-	padding-bottom: 0.3rem;
+	padding-bottom: 0.3em;
 	width: 80%;
 
-	border-bottom: 0.1rem solid var(--border-color);
+	border-bottom: 0.1em solid var(--border-color);
 
 	text-indent: 0;
 }
@@ -268,19 +268,19 @@ body {
 /* .subtitled-h2 */
 .markdown.subtitled-h2 h2,
 .markdown .subtitled-h2 h2 {
-	margin-bottom: -1.8rem;
+	margin-bottom: -1.1em;
 
 	border: none;
 }
 
 .markdown.subtitled-h2 h2+p,
 .markdown .subtitled-h2 h2+p {
-	margin: 2rem 0 0;
+	margin: 2em 0 0;
 	padding-top: 0;
-	padding-bottom: 0.3rem;
+	padding-bottom: 0.3em;
 	width: 80%;
 
-	border-bottom: 0.1rem solid var(--border-color);
+	border-bottom: 0.1em solid var(--border-color);
 
 	text-indent: 0;
 }
