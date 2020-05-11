@@ -86,7 +86,7 @@ body {
 	--paragraph-spacing: 0.5em;
 	--paragraph-indent: 0ch;
 
-	margin: 1em 2em;
+	padding: 1em 2em;
 }
 
 @media print {
@@ -98,8 +98,7 @@ body {
 }
 
 .markdown p {
-	padding-bottom: 0;
-	margin-bottom: calc(var(--paragraph-spacing) - 1em);
+	margin: calc(var(--paragraph-spacing) / 2) 0;
 
 	text-indent: var(--paragraph-indent);
 	word-wrap: break-word;
@@ -125,7 +124,10 @@ body {
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	font-family: "Roboto Mono", monospace;
-	font-size: 85%;
+	font-size: 90%;
+	text-indent: 0;
+	tab-size: 2ch;
+	-moz-tab-size: 2ch;
 
 	color: inherit;
 	font-weight: 300;
@@ -133,7 +135,7 @@ body {
 }
 
 .markdown h1 {
-	margin: 2em 0 0.4em;
+	margin: 1em 0 0.4em;
 	padding-bottom: 0.1em;
 
 	border-bottom: 0.05em solid var(--border-color);
@@ -144,9 +146,8 @@ body {
 }
 
 .markdown h2 {
-	margin: 1.5em 0 0;
-	padding-top: 0;
-	padding-bottom: 0;
+	margin: 1em 0 0.4em;
+	padding-bottom: 0.2em;
 	width: 80%;
 
 	border-bottom: 0.05em solid var(--border-color);
@@ -171,27 +172,23 @@ body {
 .markdown hr {
 	width: 75%;
 	height: 0;
-	margin: 1.8em auto 1em;
+	margin: 1em auto;
 
-	border-top: 0.1em solid;
-	border-bottom: 0;
-	border-left: none;
-	border-right: none;
-	border-color: var(--border-color);
+	border: none;
+	border-top: 0.1em solid var(--border-color);
 }
 
 .markdown table {
-	width: 100%;
 	margin: 1em auto;
 
-	font-size: 100%;
+	font-size: 1em;
 	border-collapse: collapse;
 	border-style: hidden;
 	line-height: inherit;
 }
 
 .markdown table thead {
-	font-size: 110%;
+	font-size: 1.1em;
 }
 
 .markdown table td {
@@ -199,9 +196,9 @@ body {
 }
 
 .markdown table th {
-	padding: 0.8em;
+	padding: 0.5em;
 
-	border: 0.1em solid;
+	border: 0.1em solid var(--border-color);
 	border-left: none;
 	border-right: none;
 }
@@ -215,67 +212,68 @@ body {
 }
 
 .markdown table tr:nth-child(even) td {
-	background-color: rgba(0, 0, 0, 15%);
+	background-color: var(--border-color);
 }
 
 .markdown blockquote {
-	padding-left: 1.5em;
-	margin: 2em 0;
+	--paragraph-indent: 0ch;
+
+	padding: 0.5em 1em;
+	margin: 0.5em 0;
 
 	font-style: italic;
 	border-left: 0.25em solid;
+	background-color: var(--border-color);
 }
 
 .markdown img {
 	display: block;
 	max-width: 100%;
-	margin: 1.5em auto;
+	max-height: 50em;
+	margin: 1em auto;
 }
 
-.markdown img+br {
-	display: none;
-}
-
-.markdown img+br+rem,
-.markdown img+rem {
+.markdown img+em {
 	display: block;
-	margin: 0.5em auto 1.5em;
+	margin: -0.5em auto 1em;
 
 	text-align: center;
+}
+
+.markdown iframe {
+	margin: 1em auto;
 }
 
 /* .subtitled-h1 */
 .markdown.subtitled-h1 h1,
 .markdown .subtitled-h1 h1 {
-	margin-bottom: -1em;
-
+	margin-bottom: 0;
+	padding-bottom: 0;
 	border: none;
 }
 
-.markdown.subtitled-h1 h1+p,
-.markdown .subtitled-h1 h1+p {
-	margin: 2em 0 0;
-	padding-top: 0;
+.markdown.subtitled-h1 h1+*,
+.markdown .subtitled-h1 h1+* {
+	margin-bottom: 0.7em;
 	padding-bottom: 0.3em;
 	width: 80%;
 
 	border-bottom: 0.1em solid var(--border-color);
-
 	text-indent: 0;
 }
 
 /* .subtitled-h2 */
 .markdown.subtitled-h2 h2,
 .markdown .subtitled-h2 h2 {
-	margin-bottom: -1.1em;
+	margin-bottom: 0;
+	padding-bottom: 0;
 
 	border: none;
 }
 
-.markdown.subtitled-h2 h2+p,
-.markdown .subtitled-h2 h2+p {
-	margin: 2em 0 0;
-	padding-top: 0;
+.markdown.subtitled-h2 h2+*,
+.markdown .subtitled-h2 h2+* {
+	margin-bottom: 0.7em;
 	padding-bottom: 0.3em;
 	width: 80%;
 
