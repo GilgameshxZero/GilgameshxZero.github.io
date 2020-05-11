@@ -72,7 +72,15 @@ body {
 
 	.pagebreak {
 		clear: both;
+		break-after: always;
 		page-break-after: always;
+	}
+
+	table,
+	img,
+	svg {
+		break-inside: avoid;
+		page-break-inside: avoid;
 	}
 }
 
@@ -111,10 +119,6 @@ body {
 .markdown .no-indent,
 .markdown .no-indent p {
 	text-indent: 0;
-}
-
-.markdown a {
-	background-color: transparent;
 }
 
 .markdown code {
@@ -158,15 +162,21 @@ body {
 }
 
 .markdown h3 {
-	margin: 1.5em auto -0.4em;
-	padding-bottom: 0;
+	margin: 0.5em 0;
 
 	font-weight: bolder;
 }
 
 .markdown h4 {
-	margin: 1.5em auto -0.4em;
-	padding-bottom: 0;
+	margin: 0.5em 0;
+}
+
+.markdown h5 {
+	margin: 0.5em 0;
+}
+
+.markdown h6 {
+	margin: 0.5em 0;
 }
 
 .markdown hr {
@@ -226,7 +236,8 @@ body {
 	background-color: var(--border-color);
 }
 
-.markdown img {
+.markdown img,
+.markdown svg {
 	display: block;
 	max-width: 100%;
 	max-height: 50em;
@@ -278,6 +289,5 @@ body {
 	width: 80%;
 
 	border-bottom: 0.1em solid var(--border-color);
-
 	text-indent: 0;
 }
