@@ -5,6 +5,7 @@
 	* .markdown: Apply default markdown styling to elements.
 		* .subtitled-h1: <h1> tags are grouped with the next <p> tag such that <p> appears to be a subtitle of <h1>.
 		* .subtitled-h2: <h2> tags are grouped with the next <p> tag such that <p> appears to be a subtitle of <h2>.
+		* .custom-hr-content: <hr> tags do not have a border, but instead contain user-defined content via the --hr-content parameter.
 		* --paragraph-spacing: Vertical spacing between each <p> tag.
 		* --paragraph-indent: Indent on the first line of <p> tag.
 */
@@ -190,6 +191,20 @@ body {
 
 	border: none;
 	border-top: 0.1em solid var(--border-color);
+}
+
+.markdown.custom-hr-content hr,
+.markdown .custom-hr-content hr {
+	border: none;
+  overflow: visible;
+	text-align: center;
+}
+
+.markdown.custom-hr-content hr:after,
+.markdown .custom-hr-content hr:after {
+	position: relative;
+	top: -0.7em;
+	content: var(--hr-content);
 }
 
 .markdown table {
