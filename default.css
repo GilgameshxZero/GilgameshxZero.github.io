@@ -195,15 +195,17 @@ body {
 
 .markdown.custom-hr-content hr,
 .markdown .custom-hr-content hr {
+	margin: 1.2em auto;
+	overflow: visible;
+
 	border: none;
-  overflow: visible;
 	text-align: center;
 }
 
 .markdown.custom-hr-content hr:after,
 .markdown .custom-hr-content hr:after {
 	position: relative;
-	top: -0.7em;
+	top: -0.6em;
 	content: var(--hr-content);
 }
 
