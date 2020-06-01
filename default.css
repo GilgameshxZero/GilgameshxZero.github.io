@@ -42,22 +42,6 @@
 	display: none;
 }
 
-/* HTML defaults. */
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	position: relative;
-	overflow-x: hidden;
-
-	font-family: Georgia, serif;
-	line-height: 1.25;
-	font-size: 1rem;
-}
-
 /* When vscode stylesheets aren't loaded (i.e. in-browser markdown), these are used as defaults. */
 :root {
 	/* These variables are modified if .adaptive is set and the user prefers dark. */
@@ -98,6 +82,24 @@ body {
 	}
 }
 
+/* HTML defaults. */
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	overflow-x: hidden;
+
+	font-family: Georgia, serif;
+	line-height: 1.25;
+	font-size: 1rem;
+	background-color: var(--vscode-editor-background);
+	color: var(--vscode-editor-foreground);
+}
+
 /* .adaptive */
 @media (prefers-color-scheme: dark) {
 	:root.adaptive {
@@ -131,8 +133,6 @@ body {
 
 	margin: 0;
 	padding: 1em 2em;
-	background-color: var(--vscode-editor-background);
-	color: var(--vscode-editor-foreground);
 }
 
 @media print {
