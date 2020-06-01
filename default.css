@@ -1,7 +1,7 @@
 /*
 	Options:
 
-	* .adaptive: Apply dark or light theme depending on user's system preference. Must be set on root.
+	* .adaptive: Apply dark or light theme depending on user's system preference. Must be set on root. For setting to work correctly, need to ensure that .vscode-light and .vscode-dark are not set on <body> when outside of VS Code. You may use `./vscode-md-in-browser.js` to accomplish this.
 	* .garamond: `font-family: Garamond, Georgia, serif;`
 	* .markdown: Apply default markdown styling to elements.
 		* .subtitled-h1: <h1> tags are grouped with the next <p> tag such that <p> appears to be a subtitle of <h1>.
