@@ -294,7 +294,8 @@ body {
 }
 
 .markdown blockquote {
-	--paragraph-indent: 0ch;
+	--paragraph-indent: 0;
+	--paragraph-spacing: 0;
 
 	padding: 0.5em 1em;
 	margin: 0.5em 0;
