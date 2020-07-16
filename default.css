@@ -178,6 +178,7 @@ body {
 	display: inline-block;
 	max-width: 100%;
 
+	page-break-inside: auto;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	font-family: "Roboto Mono", monospace;
