@@ -74,24 +74,19 @@
 	@page {
 		margin: 20mm;
 	}
+}
 
-	.page-break {
-		clear: both;
-		break-after: always;
-		page-break-after: always;
-	}
+.page-break {
+	clear: both;
+	break-after: always;
+	page-break-after: always;
+}
 
-	table,
-	img,
-	svg {
-		break-inside: avoid;
-		page-break-inside: avoid;
-	}
-
-	.markdown pre,
-	.markdown pre>code {
-		page-break-inside: auto !important;
-	}
+table,
+img,
+svg {
+	break-inside: avoid;
+	page-break-inside: avoid;
 }
 
 /* HTML defaults. */
