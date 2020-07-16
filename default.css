@@ -187,7 +187,7 @@ body {
 
 	white-space: pre-wrap;
 	word-wrap: break-word;
-	font-family: "Roboto Mono", monospace;
+	font-family: Consolas, monaco, monospace;
 	font-size: 0.8em;
 	text-indent: 0;
 	tab-size: 2ch;
