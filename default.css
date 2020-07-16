@@ -175,7 +175,6 @@ body {
 }
 
 .markdown code {
-	display: inline-block;
 	max-width: 100%;
 
 	white-space: pre-wrap;
